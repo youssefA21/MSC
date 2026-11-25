@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Microsoft Student Clubs SAMS | Build real tech skills with your campus community</title>
+<meta name="description" content="Microsoft Student Clubs SAMS brings students from every faculty together to learn Microsoft tools, grow future skills, and solve real problems. Meet our founders, president, and board.">
+<meta property="og:title" content="Microsoft Student Clubs SAMS">
+<meta property="og:description" content="A student tech community for every major. Meet the founders, the president, and the board.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="logo.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect x='6' width='36' height='10' fill='%23165D9E'/%3E%3Crect y='10' x='6' width='10' height='44' fill='%23203A5F'/%3E%3Crect y='10' x='42' width='10' height='28' fill='%23203A5F'/%3E%3Crect y='54' x='16' width='36' height='10' fill='%23165D9E'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blue:#165D9E; --navy:#203A5F; --smoke:#F9F9F9; --gains:#E7E7E7; --gray:#737373; --ink:#000000; --white:#FFFFFF;
+  --s25:2px; --s50:4px; --s75:8px; --s100:12px; --s200:16px; --s300:24px; --s400:32px; --s500:40px; --s600:48px; --s700:64px; --s800:80px; --s900:96px;
+  --ease:cubic-bezier(0.22,1,0.36,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:96px;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{font-family:'Manrope',system-ui,sans-serif;background:var(--smoke);color:var(--ink);font-style:normal;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+.grid>*,.mv>*,.hero-grid>*{min-width:0}
+h1,h2,h3,h4,p,a,span{overflow-wrap:anywhere}
+a{color:inherit}
+h1,h2,h3,h4,h5,h6{text-wrap:balance;font-weight:600}
+p,li,summary{text-wrap:pretty}
+
+/* Named text styles */
+.heading-1{font-size:60px;line-height:60px;font-weight:600}
+.heading-2{font-size:48px;line-height:48px;font-weight:600}
+.heading-3{font-size:36px;line-height:40px;font-weight:600}
+.heading-5{font-size:24px;line-height:32px;font-weight:600}
+.heading-6{font-size:20px;line-height:28px;font-weight:600}
+.title-2{font-size:18px;line-height:28px;font-weight:500}
+.title-3{font-size:16px;line-height:24px;font-weight:500}
+.title-4{font-size:14px;line-height:20px;font-weight:500}
+.body-2{font-size:16px;line-height:24px;font-weight:500}
+.body-3{font-size:16px;line-height:24px;font-weight:400}
+.body-5{font-size:14px;line-height:20px;font-weight:500}
+.body-6{font-size:14px;line-height:20px;font-weight:400}
+.button-md{font-size:16px;line-height:24px;font-weight:600}
+.button-sm{font-size:14px;line-height:20px;font-weight:600}
+.caption-3{font-size:12px;line-height:16px;font-weight:600}
+.caption-4{font-size:12px;line-height:16px;font-weight:500}
+.muted{color:var(--gray)}
+
+/* Layout */
+.wrap{width:100%;max-width:1120px;margin:0 auto;padding:0 var(--s300)}
+section{padding:var(--s900) 0}
+.eyebrow{display:inline-flex;align-items:center;gap:var(--s75);padding:var(--s50) var(--s100);border:1px solid var(--gains);background:var(--white);border-radius:999px;color:var(--navy);margin-bottom:var(--s300)}
+.section-head{max-width:680px;margin-bottom:var(--s600)}
+.section-head p{margin-top:var(--s200);color:var(--gray)}
+
+/* Skip link */
+.skip{position:absolute;left:var(--s200);top:-96px;background:var(--navy);color:var(--white);padding:var(--s75) var(--s200);border-radius:8px;z-index:100;transition:transform .5s var(--ease)}
+.skip:focus{transform:translateY(112px)}
+
+/* Focus, buttons */
+:focus-visible{outline:2px solid var(--blue);outline-offset:var(--s25)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:var(--s75);padding:var(--s75) var(--s100);border-radius:8px;background:var(--blue);color:var(--white);text-decoration:none;border:1px solid var(--blue);transition:transform .3s var(--ease),background-color .3s var(--ease),opacity .3s var(--ease);cursor:pointer}
+.btn:hover{background:var(--navy);border-color:var(--navy);transform:translateY(-2px)}
+.btn:active{transform:scale(0.98)}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-lg{padding:var(--s100) var(--s200);border-radius:12px}
+
+/* Nav */
+.nav{position:fixed;top:var(--s200);left:50%;transform:translateX(-50%);z-index:50;display:flex;align-items:center;gap:var(--s300);padding:var(--s75) var(--s75) var(--s75) var(--s200);background:rgba(249,249,249,.72);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid var(--gains);border-radius:16px}
+.nav .brand{display:flex;align-items:center;gap:var(--s75);text-decoration:none}
+.nav .brand svg{width:24px;height:24px}
+.nav ul{display:flex;gap:var(--s50);list-style:none}
+.nav ul a{display:block;padding:var(--s75) var(--s100);border-radius:8px;text-decoration:none;color:var(--gray);transition:background-color .3s var(--ease),color .3s var(--ease)}
+.nav ul a:hover,.nav ul a[aria-current="true"]{background:var(--gains);color:var(--ink)}
+.toggle{display:none;width:40px;height:40px;border:0;background:transparent;border-radius:8px;cursor:pointer;position:relative}
+.toggle span{position:absolute;left:10px;right:10px;height:2px;background:var(--ink);border-radius:2px;transition:transform .5s var(--ease),opacity .3s var(--ease)}
+.toggle span:nth-child(1){top:15px}.toggle span:nth-child(2){top:23px}
+.toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(4px) rotate(45deg)}
+.toggle[aria-expanded="true"] span:nth-child(2){transform:translateY(-4px) rotate(-45deg)}
+.panel{position:fixed;inset:0;z-index:40;background:rgba(249,249,249,.94);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);display:flex;flex-direction:column;justify-content:center;gap:var(--s200);padding:var(--s700) var(--s300);opacity:0;pointer-events:none;transition:opacity .5s var(--ease)}
+.panel.open{opacity:1;pointer-events:auto}
+.panel a{opacity:0;transform:translateY(24px);transition:transform .5s var(--ease),opacity .5s var(--ease);text-decoration:none}
+.panel.open a{opacity:1;transform:none}
+.panel.open a:nth-child(1){transition-delay:60ms}.panel.open a:nth-child(2){transition-delay:120ms}.panel.open a:nth-child(3){transition-delay:180ms}.panel.open a:nth-child(4){transition-delay:240ms}.panel.open a:nth-child(5){transition-delay:300ms}.panel.open a:nth-child(6){transition-delay:360ms}
+
+/* Hero */
+.hero{padding-top:var(--s900);padding-bottom:var(--s800)}
+.hero .wrap{padding-top:var(--s800)}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:var(--s600);align-items:center}
+.hero h1{max-width:680px;background:linear-gradient(90deg,#000000,#666666);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+.hero .sub{max-width:680px;margin-top:var(--s300);color:var(--gray)}
+.hero .actions{display:flex;flex-wrap:wrap;align-items:center;gap:var(--s200);margin-top:var(--s400)}
+.proof{display:flex;flex-wrap:wrap;gap:var(--s300);margin-top:var(--s500)}
+.proof div{display:flex;flex-direction:column;gap:var(--s25)}
+.proof strong{font-size:24px;line-height:32px;font-weight:600}
+.logo-card{background:var(--white);border:1px solid var(--gains);border-radius:16px;padding:var(--s400);display:flex;align-items:center;justify-content:center;aspect-ratio:1/1}
+.logo-card img{width:100%;height:auto;max-width:360px}
+
+/* Tagline reveal */
+.tagline{background:var(--white);border-top:1px solid var(--gains);border-bottom:1px solid var(--gains);padding:var(--s900) 0}
+.tagline p{max-width:680px;color:var(--ink)}
+.tagline .w{opacity:.3;transition:opacity .5s var(--ease)}
+.tagline .w.on{opacity:1}
+
+/* Cards */
+.grid{display:grid;gap:var(--s200)}
+.g2{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
+.card{background:var(--white);border:1px solid var(--gains);border-radius:16px;padding:var(--s300);transition:transform .5s var(--ease),border-color .3s var(--ease)}
+.card:hover{transform:translateY(-4px);border-color:var(--blue)}
+.icon{width:40px;height:40px;border-radius:8px;background:var(--smoke);color:var(--blue);display:flex;align-items:center;justify-content:center;margin-bottom:var(--s200)}
+.icon svg{width:24px;height:24px}
+.card h3{margin-bottom:var(--s75)}
+.card p{color:var(--gray)}
+
+/* Mission */
+.mv{display:grid;grid-template-columns:1fr 1fr;gap:var(--s200)}
+.mv .card{padding:var(--s400)}
+.mv .label{color:var(--blue);margin-bottom:var(--s200);display:block}
+
+/* People */
+.person{padding:var(--s75);display:flex;flex-direction:column}
+.photo{aspect-ratio:4/5;border-radius:8px;background:var(--blue);color:var(--white);display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative}
+.photo.navy{background:var(--navy)}
+.photo .mono{font-size:48px;line-height:48px;font-weight:600;letter-spacing:.02em}
+.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top}
+.person .meta{padding:var(--s200) var(--s100) var(--s100)}
+.role{display:inline-block;margin-top:var(--s50);color:var(--blue)}
+.people-lead{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--s200)}
+.people-vp{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--s200);margin-top:var(--s200)}
+.group-label{margin:var(--s500) 0 var(--s200);color:var(--gray)}
+.group-label:first-of-type{margin-top:0}
+.timeline{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--s200);margin:var(--s500) auto 0;max-width:728px}
+.timeline .card .yr{color:var(--blue);display:block;margin-bottom:var(--s75)}
+
+/* Steps */
+.steps{counter-reset:s}
+.steps .card{position:relative}
+.steps .num{display:inline-flex;width:32px;height:32px;border-radius:8px;background:var(--navy);color:var(--white);align-items:center;justify-content:center;margin-bottom:var(--s200)}
+
+/* Partners */
+.chips{display:flex;flex-wrap:wrap;gap:var(--s100)}
+.chip{padding:var(--s75) var(--s200);background:var(--white);border:1px solid var(--gains);border-radius:12px;color:var(--navy)}
+
+/* FAQ */
+.faq{max-width:760px}
+details{background:var(--white);border:1px solid var(--gains);border-radius:12px;margin-bottom:var(--s100);transition:border-color .3s var(--ease)}
+details[open]{border-color:var(--blue)}
+summary{list-style:none;cursor:pointer;padding:var(--s200) var(--s300);display:flex;justify-content:space-between;align-items:center;gap:var(--s200);border-radius:12px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"";width:12px;height:12px;border-right:2px solid var(--ink);border-bottom:2px solid var(--ink);transform:rotate(45deg) translateY(-2px);transition:transform .5s var(--ease);flex:none}
+details[open] summary::after{transform:rotate(-135deg) translateY(-2px)}
+details p{padding:0 var(--s300) var(--s300);color:var(--gray)}
+
+/* Final CTA */
+.final{background:var(--white);border-top:1px solid var(--gains);text-align:center}
+.final .inner{max-width:680px;margin:0 auto}
+.final p{margin:var(--s200) 0 var(--s400);color:var(--gray)}
+.final .note{margin:var(--s200) 0 0}
+
+/* Footer */
+footer{padding:var(--s600) 0;border-top:1px solid var(--gains)}
+.foot{display:flex;flex-wrap:wrap;gap:var(--s300);justify-content:space-between;align-items:center}
+.foot nav{display:flex;flex-wrap:wrap;gap:var(--s100) var(--s300)}
+.foot a{color:var(--gray);text-decoration:none;transition:color .3s var(--ease)}
+.foot a:hover{color:var(--ink)}
+.legal{padding:var(--s800) 0;background:var(--white);border-top:1px solid var(--gains)}
+.legal h2{margin-bottom:var(--s200)}
+.legal p{max-width:680px;color:var(--gray);margin-bottom:var(--s300)}
+
+/* Reveal */
+.rv{opacity:0;transform:translateY(32px);transition:transform .8s var(--ease),opacity .8s var(--ease)}
+.rv.in{opacity:1;transform:none}
+
+@media (max-width:900px){
+  section{padding:var(--s700) 0}
+  .hero-grid{grid-template-columns:1fr}
+  .logo-card{aspect-ratio:auto;padding:var(--s300)}
+  .g3,.g4,.timeline,.people-lead,.people-vp{grid-template-columns:1fr 1fr}
+  .mv{grid-template-columns:1fr}
+  .heading-1{font-size:36px;line-height:40px}
+  .heading-2{font-size:30px;line-height:36px}
+  .heading-3{font-size:24px;line-height:32px}
+  .nav ul,.nav .btn{display:none}
+  .toggle{display:block}
+  .nav{gap:var(--s100)}
+}
+@media (min-width:901px) and (max-width:1100px){
+  .g4{grid-template-columns:repeat(2,1fr)}
+  .heading-1{font-size:48px;line-height:48px}
+  .hero-grid{gap:var(--s400)}
+}
+@media (max-width:900px){
+  .photo{aspect-ratio:1/1}
+  .logo-card img{max-width:280px}
+  .nav{max-width:calc(100vw - 32px)}
+}
+@media (max-width:560px){
+  .wrap{padding:0 var(--s200)}
+  .people-lead,.people-vp{grid-template-columns:1fr}
+  .grid[style*="max-width"]{max-width:320px!important}
+  .btn-lg{width:100%}
+  .hero .actions{flex-direction:column;align-items:stretch}
+  .hero .actions .body-5{text-align:center}
+  .mv .card{padding:var(--s300)}
+  .heading-5{font-size:20px;line-height:28px}
+
+  .g2,.g3,.g4,.timeline,.people-lead,.people-vp{grid-template-columns:1fr}
+  .hero{padding-top:var(--s700)}
+  .tagline{padding:var(--s700) 0}
+  .photo .mono{font-size:36px;line-height:40px}
+}
+@media (prefers-reduced-motion:reduce){
+  *{transition-property:opacity!important;transition-duration:.2s!important;transition-delay:0s!important;scroll-behavior:auto!important}
+  .rv{transform:none}
+  .panel a{transform:none}
+  .tagline .w{opacity:1}
+}
+</style>
+</head>
+<body>
+<a class="skip button-sm" href="#main">Skip to content</a>
+
+<header>
+  <nav class="nav" aria-label="Primary">
+    <a class="brand title-4" href="#top" aria-label="Microsoft Student Clubs SAMS home">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><rect x="6" width="36" height="10" fill="#165D9E"/><rect y="10" x="6" width="10" height="44" fill="#203A5F"/><rect y="10" x="42" width="10" height="28" fill="#203A5F"/><rect y="54" x="16" width="36" height="10" fill="#165D9E"/></svg>
+      <span>MSC SAMS</span>
+    </a>
+    <ul class="button-sm">
+      <li><a href="#about" data-nav>About</a></li>
+      <li><a href="#leadership" data-nav>Leadership</a></li>
+      <li><a href="#join" data-nav>Join</a></li>
+      <li><a href="#faq" data-nav>FAQ</a></li>
+    </ul>
+    <a class="btn button-sm" href="#join">Apply now</a>
+    <button class="toggle" id="toggle" aria-expanded="false" aria-controls="panel" aria-label="Open menu"><span></span><span></span></button>
+  </nav>
+  <div class="panel" id="panel" aria-hidden="true">
+    <a class="heading-3" href="#about">About</a>
+    <a class="heading-3" href="#leadership">Leadership</a>
+    <a class="heading-3" href="#join">Join</a>
+    <a class="heading-3" href="#partners">Partners</a>
+    <a class="heading-3" href="#faq">FAQ</a>
+    <a class="btn button-md btn-lg" href="#join" style="align-self:flex-start">Apply now</a>
+  </div>
+</header>
+
+<main id="main">
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div>
+          <span class="eyebrow caption-3">Microsoft Student Clubs · SAMS</span>
+          <h1 class="heading-1">A tech community<br>for students from<br>every faculty</h1>
+          <p class="sub title-2">Build future skills and solve real problems with a student team that runs sessions, summits, and projects all year.</p>
+          <div class="actions">
+            <a class="btn btn-lg button-md" href="#join">Join our family</a>
+            <span class="body-5 muted">Open now for technical and non technical teams.</span>
+          </div>
+          </div>
+        <div class="logo-card"><img src="logo.png" alt="Microsoft Student Clubs SAMS logo" width="806" height="494"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TAGLINE REVEAL -->
+  <section class="tagline" aria-label="Our promise">
+    <div class="wrap">
+      <p class="heading-3" id="reveal">We turn curious students into confident builders. Session, project, one community at a time.</p>
+    </div>
+  </section>
+
+  <!-- ABOUT / MISSION -->
+  <section id="about">
+    <div class="wrap">
+      <div class="section-head rv">
+        <h2 class="heading-2">Our mission and vision</h2>
+        <p class="title-2">Everything the club does starts from one idea: tech skills should not belong to one major.</p>
+      </div>
+      <div class="mv rv">
+        <div class="card">
+          <span class="caption-3 label">MISSION</span>
+          <p class="heading-5">Empower students across disciplines to build tech communities, gain future skills with Microsoft tools, and solve real world problems together.</p>
+        </div>
+        <div class="card">
+          <span class="caption-3 label">VISION</span>
+          <p class="heading-5">A campus where every student, from any faculty, can build tech skills and turn ideas into real impact.</p>
+        </div>
+      </div>
+
+      <div class="grid g4 rv" style="margin-top:var(--s200)">
+        <div class="card">
+          <div class="icon"><svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M208 40H48a16 16 0 0 0-16 16v112a16 16 0 0 0 16 16h160a16 16 0 0 0 16-16V56a16 16 0 0 0-16-16Zm0 128H48V56h160Zm-48 40a8 8 0 0 1-8 8H104a8 8 0 0 1 0-16h48a8 8 0 0 1 8 8Z"/></svg></div>
+          <h3 class="title-2">Technical tracks</h3>
+          <p class="body-6">AI, Data, Web, Cybersecurity, C#, Problem Solving, and Programming Fundamentals.</p>
+        </div>
+        <div class="card">
+          <div class="icon"><svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M230.33 141.06a24.34 24.34 0 0 0-18.61-4.77C230.5 117.33 240 98.48 240 80c0-26.47-21.29-48-47.46-48A47.58 47.58 0 0 0 156 48.75 47.58 47.58 0 0 0 119.46 32C93.29 32 72 53.53 72 80c0 18.46 9.95 37.31 29.5 56.28-4.63-.68-9.4.47-13.23 3.25A24.46 24.46 0 0 0 80 160a24 24 0 0 0 24 24h24a24 24 0 0 0 0-48h-6.13a8 8 0 0 1-5.65-13.65C128 111.16 144 94 144 80a8 8 0 0 0-16 0c0 9.12-12.54 22-18.65 28.05C95.51 94.5 88 85.45 88 80c0-17.64 14.24-32 31.46-32A31.7 31.7 0 0 1 144 59.7a8 8 0 0 0 13.9 0A31.7 31.7 0 0 1 192.54 48C209.76 48 224 62.36 224 80c0 15.63-15.52 32.92-24.17 41.28a8 8 0 0 0 5.65 13.65 8.51 8.51 0 0 1 8 7 8 8 0 0 0 15.87-2Z" transform="scale(.9) translate(14 14)"/></svg></div>
+          <h3 class="title-2">Career and people skills</h3>
+          <p class="body-6">HR, marketing, media, PR, and event management teams that run the club like a real organization.</p>
+        </div>
+        <div class="card">
+          <div class="icon"><svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M128 24a104 104 0 1 0 104 104A104.11 104.11 0 0 0 128 24Zm88 104a87.62 87.62 0 0 1-6.4 32.94l-44.7-27.49a15.92 15.92 0 0 0-6.24-2.23l-22.82-3.08a16.11 16.11 0 0 0-16 7.86h-8.72l-3.8-7.86a15.91 15.91 0 0 0-11-8.67l-8-1.73L96.14 104h16.71a16.06 16.06 0 0 0 7.73-2l12.25-6.76a16.62 16.62 0 0 0 3-2.14l26.91-24.34A15.99 15.99 0 0 0 166 49.1a87.9 87.9 0 0 1 50 78.9ZM40 128a87.53 87.53 0 0 1 8.54-37.8l11.34 30.27a16 16 0 0 0 11.62 10l21.43 4.61 29.24 58.4A88.17 88.17 0 0 1 40 128Z"/></svg></div>
+          <h3 class="title-2">Summits and sessions</h3>
+          <p class="body-6">Talks, workshops, and student summits with speakers from across the Arab world.</p>
+        </div>
+        <div class="card">
+          <div class="icon"><svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M244.8 150.4a8 8 0 0 1-11.2-1.6A51.6 51.6 0 0 0 192 128a8 8 0 0 1-7.37-4.89 8 8 0 0 1 0-6.22A8 8 0 0 1 192 112a24 24 0 1 0-23.24-30 8 8 0 1 1-15.5-4A40 40 0 1 1 219 117.51a67.94 67.94 0 0 1 27.43 21.68 8 8 0 0 1-1.63 11.21ZM190.92 212a8 8 0 1 1-13.85 8 57 57 0 0 0-98.15 0 8 8 0 1 1-13.84-8 72.06 72.06 0 0 1 33.74-29.92 48 48 0 1 1 58.36 0A72.06 72.06 0 0 1 190.92 212ZM128 176a32 32 0 1 0-32-32 32 32 0 0 0 32 32Zm-56-56a8 8 0 0 0-8-8 24 24 0 1 1 23.24-30 8 8 0 1 0 15.5-4A40 40 0 1 0 37 117.51a67.94 67.94 0 0 0-27.4 21.68 8 8 0 1 0 12.8 9.61A51.6 51.6 0 0 1 64 128a8 8 0 0 0 8-8Z"/></svg></div>
+          <h3 class="title-2">One community</h3>
+          <p class="body-6">Members from every faculty, led by a student board and supported by faculty advisor Dr. Heba Sabry.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEADERSHIP -->
+  <section id="leadership" style="background:var(--white);border-top:1px solid var(--gains);border-bottom:1px solid var(--gains)">
+    <div class="wrap">
+      <div class="section-head rv" style="margin-left:auto;margin-right:auto;text-align:center">
+        <h2 class="heading-2">The people behind the club</h2>
+        <p class="title-2">Our founders started it, our president leads it today, and our vice presidents keep every team moving.</p>
+      </div>
+
+      <h3 class="caption-3 group-label rv" style="text-align:center">PRESIDENT</h3>
+      <div class="grid rv" style="max-width:356px;margin:0 auto">
+        <article class="card person">
+          <div class="photo"><span class="mono" aria-hidden="true">EO</span><img data-photo="photos/engy-osama.jpg" alt="Engy Osama, current president" loading="lazy"></div>
+          <div class="meta"><h4 class="heading-6">Engy Osama</h4><span class="role caption-3">PRESIDENT · 2026 SEASON</span><p class="body-6 muted" style="margin-top:var(--s100)">Joined as Events Head in 2024, became Vice President in 2025, and now leads the club.</p></div>
+        </article>
+      </div>
+
+      <h3 class="caption-3 group-label rv" style="text-align:center">VICE PRESIDENTS</h3>
+      <div class="grid g2 rv" style="max-width:728px;margin:0 auto">
+        <article class="card person">
+          <div class="photo navy"><span class="mono" aria-hidden="true">JW</span><img data-photo="photos/joudy-walid.jpg" alt="Joudy Walid, vice president" loading="lazy"></div>
+          <div class="meta"><h4 class="heading-6">Joudy Walid</h4><span class="role caption-3">VICE PRESIDENT</span></div>
+        </article>
+        <article class="card person">
+          <div class="photo"><span class="mono" aria-hidden="true">MA</span><img data-photo="photos/mohamed-ahmed.jpg" alt="Mohamed Ahmed, vice president" loading="lazy"></div>
+          <div class="meta"><h4 class="heading-6">Mohamed Ahmed</h4><span class="role caption-3">VICE PRESIDENT</span></div>
+        </article>
+      </div>
+
+      <h3 class="caption-3 group-label rv" style="text-align:center">FOUNDERS</h3>
+      <div class="grid g2 rv" style="max-width:728px;margin:0 auto">
+        <article class="card person">
+          <div class="photo navy"><span class="mono" aria-hidden="true">AA</span><img data-photo="photos/ahmed-adel.jpg" alt="Ahmed Adel, founder and first president" loading="lazy"></div>
+          <div class="meta"><h4 class="heading-6">Ahmed Adel</h4><span class="role caption-3">FOUNDER · FIRST PRESIDENT · BOARD DIRECTOR</span><p class="body-6 muted" style="margin-top:var(--s100)">Launched the club in 2024 as its founder and first president. Now serves on the board as a Board Director.</p></div>
+        </article>
+        <article class="card person">
+          <div class="photo"><span class="mono" aria-hidden="true">MH</span><img data-photo="photos/mohamed-haitham.jpg" alt="Mohamed Haitham, cofounder" loading="lazy"></div>
+          <div class="meta"><h4 class="heading-6">Mohamed Haitham</h4><span class="role caption-3">COFOUNDER · BOARD DIRECTOR</span><p class="body-6 muted" style="margin-top:var(--s100)">Cofounder and Board Director. Led the technical team as its head in the 2025 season.</p></div>
+        </article>
+      </div>
+
+      <div class="timeline rv">
+        <div class="card"><span class="caption-3 yr">2024</span><h4 class="title-2">Launch and new brand</h4><p class="body-6 muted" style="margin-top:var(--s50)">Ahmed Adel founds the club as its first president. We join the reimagined Microsoft Student Clubs network across Egypt.</p></div>
+        <div class="card"><span class="caption-3 yr">2026</span><h4 class="title-2">The High Board</h4><p class="body-6 muted" style="margin-top:var(--s50)">Engy Osama takes the presidency with two vice presidents and both founders on the board.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW TO JOIN -->
+  <section id="join">
+    <div class="wrap">
+      <div class="section-head rv">
+        <span class="eyebrow caption-3">Online recruitment is open</span>
+        <h2 class="heading-2">Apply to join the club</h2>
+        <p class="title-2">Pick the team type that fits you and fill in the form. Membership is free.</p>
+      </div>
+      <div class="grid g2 rv" style="max-width:728px;margin:0 auto">
+        <div class="card">
+          <h3 class="heading-6">Technical teams</h3>
+          <p class="body-6" style="margin:var(--s75) 0 var(--s300)">AI, Data, Web, Cybersecurity, C#, Problem Solving, and Programming Fundamentals.</p>
+          <a class="btn btn-lg button-md" href="https://forms.cloud.microsoft/r/T24q02NwVx" target="_blank" rel="noopener">Apply to a technical team</a>
+        </div>
+        <div class="card">
+          <h3 class="heading-6">Non technical teams</h3>
+          <p class="body-6" style="margin:var(--s75) 0 var(--s300)">HR, Marketing, Media, PR, and Event Management.</p>
+          <a class="btn btn-lg button-md" href="https://forms.cloud.microsoft/r/WD0VAGWW0X" target="_blank" rel="noopener">Apply to a non technical team</a>
+        </div>
+      </div>
+      <div class="grid g3 steps rv" style="margin-top:var(--s400)">
+        <div class="card"><span class="num caption-3">1</span><h3 class="title-2">Choose your track</h3><p class="body-6">Technical or non technical. You can ask us on Instagram if you are unsure.</p></div>
+        <div class="card"><span class="num caption-3">2</span><h3 class="title-2">Submit the form</h3><p class="body-6">Tell us about yourself and the team you want to join.</p></div>
+        <div class="card"><span class="num caption-3">3</span><h3 class="title-2">Meet the team</h3><p class="body-6">Once you are in, you start building with your team from the first session.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PARTNERS -->
+  <section id="partners" style="padding-top:0">
+    <div class="wrap">
+      <div class="section-head rv">
+        <h2 class="heading-3">Events and partners we have worked with</h2>
+      </div>
+      <div class="chips rv">
+        <span class="chip title-4">Microsoft Learn Student Ambassadors</span>
+        <span class="chip title-4">TIEC Innovation Ambassadors</span>
+        <span class="chip title-4">DSC MENA 2025</span>
+        <span class="chip title-4">Techne Summit Alexandria 2024</span>
+        <span class="chip title-4">Innovation and Entrepreneurship Summit</span>
+        <span class="chip title-4">Carerha Summit</span>
+        <span class="chip title-4">Rise Up Summit</span>
+        <span class="chip title-4">AI Features</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" style="background:var(--white);border-top:1px solid var(--gains)">
+    <div class="wrap">
+      <div class="section-head rv"><h2 class="heading-2">Questions students ask</h2></div>
+      <div class="faq rv">
+        <details><summary class="title-3">Who can join the club?</summary><p class="body-3">Students from any faculty. The club is built for people across disciplines, so you do not need a computer science background.</p></details>
+        <details><summary class="title-3">When does recruitment open?</summary><p class="body-3">Online recruitment is open now.</p></details>
+        <details><summary class="title-3">What will I learn?</summary><p class="body-3">Technical tracks cover AI, Data, Web, Cybersecurity, C#, Problem Solving, and Programming Fundamentals. Other teams build skills in HR, marketing, media, PR, and event management.</p></details>
+        <details><summary class="title-3">Do I need experience with Microsoft tools?</summary><p class="body-3">No. Sessions start from the basics and we teach the tools as you go.</p></details>
+        <details><summary class="title-3">Is the club part of Microsoft?</summary><p class="body-3">We are part of the Microsoft Student Clubs network in Egypt, run by students at SAMS.</p></details>
+        <details><summary class="title-3">Is there a fee to join?</summary><p class="body-3">No. Membership is free.</p></details>
+        <details><summary class="title-3">How do I contact the club?</summary><p class="body-3">Message us on Instagram at @microsoft.sams. We reply there.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="final">
+    <div class="wrap"><div class="inner rv">
+      <h2 class="heading-2">Your seat on the team is waiting</h2>
+      <p class="title-2">Online recruitment is open. Apply to a technical or non technical team today.</p>
+      <a class="btn btn-lg button-md" href="#join">Join our family</a>
+      <p class="note body-5 muted">Free to join. Follow us for updates: <a href="https://www.instagram.com/microsoft.sams/" target="_blank" rel="noopener">Instagram</a>, <a href="https://www.linkedin.com/company/microsoft-student-club-sams/" target="_blank" rel="noopener">LinkedIn</a>, <a href="https://www.tiktok.com/@microsoft_sc_sams" target="_blank" rel="noopener">TikTok</a>.</p>
+    </div></div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <span class="body-5 muted">© 2026 Microsoft Student Clubs SAMS. A student led community.</span>
+    <nav class="body-5" aria-label="Footer">
+      <a href="#privacy">Privacy</a>
+      <a href="#terms">Terms</a>
+      <a href="https://www.instagram.com/microsoft.sams/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.linkedin.com/company/microsoft-student-club-sams/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.tiktok.com/@microsoft_sc_sams" target="_blank" rel="noopener">TikTok</a>
+    </nav>
+  </div>
+</footer>
+
+<section class="legal" aria-label="Legal">
+  <div class="wrap">
+    <h2 class="heading-5" id="privacy">Privacy</h2>
+    <p class="body-6">This page does not collect personal data and has no forms or tracking. Names and photos of club leaders were first published by the club on its official Instagram account.</p>
+    <h2 class="heading-5" id="terms">Terms</h2>
+    <p class="body-6">This is an unofficial student club page. Microsoft and the Microsoft logo are trademarks of the Microsoft group of companies. Club information may change each season.</p>
+  </div>
+</section>
+
+<script>
+(function(){
+  var reduce=window.matchMedia('(prefers-color-scheme: none)')&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // Photos: use if file exists, otherwise monogram stays
+  document.querySelectorAll('img[data-photo]').forEach(function(im){
+    im.style.display='none';
+    im.onload=function(){im.style.display='block';};
+    im.src=im.getAttribute('data-photo');
+  });
+  // Mobile menu
+  var t=document.getElementById('toggle'),p=document.getElementById('panel');
+  function setMenu(o){t.setAttribute('aria-expanded',o);t.setAttribute('aria-label',o?'Close menu':'Open menu');p.classList.toggle('open',o);p.setAttribute('aria-hidden',!o);document.body.style.overflow=o?'hidden':'';}
+  t.addEventListener('click',function(){setMenu(t.getAttribute('aria-expanded')!=='true');});
+  p.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){setMenu(false);});});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')setMenu(false);});
+  // Scroll reveals, once
+  var rv=document.querySelectorAll('.rv');
+  if(reduce||!('IntersectionObserver' in window)){rv.forEach(function(e){e.classList.add('in');});}
+  else{var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});rv.forEach(function(e){io.observe(e);});}
+  // Tagline: word by word
+  var r=document.getElementById('reveal');
+  var words=r.textContent.trim().split(/\s+/);
+  r.setAttribute('aria-label',r.textContent.trim());
+  r.innerHTML=words.map(function(w){return '<span class="w" aria-hidden="true">'+w+'</span>';}).join(' ');
+  var ws=r.querySelectorAll('.w');
+  if(reduce||!('IntersectionObserver' in window)){ws.forEach(function(w){w.classList.add('on');});}
+  else{var wo=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');}});},{rootMargin:'0px 0px -30% 0px',threshold:0});ws.forEach(function(w){wo.observe(w);});}
+  // Current nav item
+  var links=[].slice.call(document.querySelectorAll('[data-nav]'));
+  var secs=links.map(function(a){return document.querySelector(a.getAttribute('href'));});
+  if('IntersectionObserver' in window){var so=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(a){a.removeAttribute('aria-current');});var i=secs.indexOf(e.target);if(i>-1)links[i].setAttribute('aria-current','true');}});},{rootMargin:'-40% 0px -55% 0px'});secs.forEach(function(s){if(s)so.observe(s);});}
+})();
+</script>
+</body>
+</html>
